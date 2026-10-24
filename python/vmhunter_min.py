@@ -14,7 +14,7 @@ import time
 from websocket import create_connection
 
 API_KEY = os.environ.get("VMHUNTER_API_KEY", "")
-WS_URL = os.environ.get("VMHUNTER_WS_URL", "ws://app.vmhunter.com:2701")
+WS_URL = os.environ.get("VMHUNTER_WS_URL", "wss://app.vmhunter.com/ws")
 
 path = sys.argv[1] if len(sys.argv) > 1 else "callee.raw"
 ws = create_connection(WS_URL, timeout=10)

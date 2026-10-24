@@ -9,7 +9,7 @@ const fs = require("fs");
 const WebSocket = require("ws");
 
 const API_KEY = process.env.VMHUNTER_API_KEY || "";
-const WS_URL = process.env.VMHUNTER_WS_URL || "ws://app.vmhunter.com:2701";
+const WS_URL = process.env.VMHUNTER_WS_URL || "wss://app.vmhunter.com/ws";
 const path = process.argv[2] || "callee.raw";
 
 const ws = new WebSocket(WS_URL);
